@@ -11,11 +11,13 @@ use std::time::Duration;
 pub const TOPIC_PREFIX: &str = "eth2";
 pub const TOPIC_ENCODING_POSTFIX: &str = "ssz";
 pub const BEACON_BLOCK_TOPIC: &str = "beacon_block";
-pub const BEACON_ATTESTATION_TOPIC: &str = "beacon_attestation";
+pub const BEACON_AGGREGATE_AND_PROOF: &str = "beacon_block";
+pub const COMMITEE_INDEX_TOPIC: &str = "committee_index{}_beacon_attestation";
 pub const VOLUNTARY_EXIT_TOPIC: &str = "voluntary_exit";
 pub const PROPOSER_SLASHING_TOPIC: &str = "proposer_slashing";
 pub const ATTESTER_SLASHING_TOPIC: &str = "attester_slashing";
-pub const SHARD_TOPIC_PREFIX: &str = "shard";
+/// The maximum number of attestation subnets.
+pub const ATTESTATION_SUBNET_COUNT: u64 = 64;
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
 #[serde(default)]

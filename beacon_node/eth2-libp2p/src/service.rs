@@ -126,7 +126,7 @@ impl Service {
         // subscribe to default gossipsub topics
         let mut topics = vec![];
 
-        /* Here we subscribe to all the required gossipsub topics required for interop.
+        /* Here we subscribe to all the required gossipsub topics required for mainnet.
          * The topic builder adds the required prefix and postfix to the hardcoded topics that we
          * must subscribe to.
          */
@@ -137,7 +137,7 @@ impl Service {
             ))
         };
         topics.push(topic_builder(BEACON_BLOCK_TOPIC));
-        topics.push(topic_builder(BEACON_ATTESTATION_TOPIC));
+        topics.push(topic_builder(BEACON_AGGREGATE_AND_PROOF));
         topics.push(topic_builder(VOLUNTARY_EXIT_TOPIC));
         topics.push(topic_builder(PROPOSER_SLASHING_TOPIC));
         topics.push(topic_builder(ATTESTER_SLASHING_TOPIC));
