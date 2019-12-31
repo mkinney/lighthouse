@@ -8,6 +8,9 @@ EF_TESTS = "tests/ef_tests"
 install:
 	cargo install --path lighthouse --force
 
+install_sim:
+	cargo install --path tests/beacon_chain_sim --force
+
 # Runs the full workspace tests in **release**, without downloading any additional
 # test vectors.
 test-release:
